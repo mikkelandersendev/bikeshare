@@ -1,0 +1,40 @@
+ {
+  "project_info": {
+    "project_number": "853556623934",
+    "firebase_url": "https://bikeshare-ffe05.firebaseio.com",
+    "project_id": "bikeshare-ffe05",
+    "storage_bucket": "bikeshare-ffe05.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853556623934:android:6a451066f4a8f1c9",
+        "android_client_info": {
+          "package_name": "com.example.bikeshareapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853556623934-8htac0sp1c93e8qmsqap2hjrj5apbt76.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBevrSmAodJaXrKOZ7HX4zT-2-VYaWQAdA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853556623934-8htac0sp1c93e8qmsqap2hjrj5apbt76.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
