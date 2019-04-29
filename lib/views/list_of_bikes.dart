@@ -130,9 +130,11 @@ class BikeListState extends State<BikeList> {
         elevation: 8.0,
         // margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
         child: Container(
+          width: 378,
           decoration: BoxDecoration(color: Color.fromRGBO(64, 75, 96, .9)),
           padding: EdgeInsets.only(left: 1),
           child: Row(
+
             children: <Widget>[
               leftSection,
               Padding(
@@ -140,7 +142,9 @@ class BikeListState extends State<BikeList> {
               ),
               BikeShareVerticalDivider(),
               midSection,
-              rightSection
+              Expanded(
+                child: rightSection,
+              ),
             ],
           ),
         ),
@@ -218,7 +222,7 @@ class BikeListState extends State<BikeList> {
               .snapshots()
               .asBroadcastStream(),
           builder: (context, snapshot) {
-            if (!snapshot.hasData) return const Text("Loading data...");
+            if (!snapshot.hasData) return CircularProgressIndicator();
             return ListView.builder(
               scrollDirection: Axis.vertical,
               itemCount: snapshot.data.documents.length,

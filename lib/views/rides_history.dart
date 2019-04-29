@@ -24,11 +24,36 @@ class RidesHistoryState extends State<RidesHistory> {
           padding: EdgeInsets.only(left: 1),
           child: Column(
             children: <Widget>[
-              Text("Bike: " + document.data["BikeID"].documentID.toString()),
-              Text("End location: " + document.data["endLocation"].latitude.toString() + "," + document.data["endLocation"].longitude.toString()),
-              Text("Start location: " + document.data["startLocation"].latitude.toString() + "," + document.data["startLocation"].longitude.toString()),
-              Text("End Time: " + document.data["endTime"].toDate().toString()),
-              Text("Start Time: " + document.data["startTime"].toDate().toString()),
+              Row(
+                children: <Widget>[
+                  Icon(Icons.directions_bike, color: Colors.white, size: 30,),
+                  Text(" Bike ID: " + document.data["BikeID"].documentID.toString(), style: TextStyle(color: Colors.white, fontSize: 18),),
+                ],
+              ),
+              Row(
+                children: <Widget>[
+                  Icon(Icons.location_on, color: Colors.white, size: 30,),
+                  Text("Start location: " +  document.data["startLocation"].latitude.toString() + "," + document.data["startLocation"].longitude.toString(), style: TextStyle(color: Colors.white, fontSize: 18),),
+                ],
+              ),
+              Row(
+                children: <Widget>[
+                  Icon(Icons.location_off, color: Colors.white, size: 30,),
+                  Text(" End location: " + document.data["endLocation"].latitude.toString() + "," + document.data["endLocation"].longitude.toString(), style: TextStyle(color: Colors.white, fontSize: 18),),
+                ],
+              ),
+              Row(
+                children: <Widget>[
+                  Icon(Icons.timer, color: Colors.white, size: 30,),
+                  Text("Start Time: " + document.data["startTime"].toDate().toString(), style: TextStyle(color: Colors.white, fontSize: 18),),
+                ],
+              ),
+              Row(
+                children: <Widget>[
+                  Icon(Icons.timer_off, color: Colors.white, size: 30,),
+                  Text("End Time: " + document.data["endTime"].toDate().toString(), style: TextStyle(color: Colors.white, fontSize: 18),),
+                ],
+              ),
             ],
           ),
           ),

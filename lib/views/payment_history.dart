@@ -21,10 +21,21 @@ class PaymentHistoryState extends State<PaymentHistory> {
         child: Container(
           decoration: BoxDecoration(color: Color.fromRGBO(64, 75, 96, .9)),
           padding: EdgeInsets.only(left: 1),
-          child: Row(
+          child: Column(
             children: <Widget>[
-              Text("Ride: " + document.data["ride"].documentID.toString()),
-              Text("Total: " + document.data["total"].toString()),
+              Row(
+                children: <Widget>[
+                  Icon(Icons.directions_bike, color: Colors.white, size: 30,),
+                  Text(" Bike ID: " + document.data["ride"].documentID.toString(), style: TextStyle(color: Colors.white, fontSize: 18),),
+                ],
+              ),
+              Row(
+                children: <Widget>[
+                  Icon(Icons.attach_money, color: Colors.white, size: 30,),
+                  Text("Total Cost: " + document.data["total"].toString(), style: TextStyle(color: Colors.white, fontSize: 18),),
+                ],
+              )
+
             ],
           ),
           ),
